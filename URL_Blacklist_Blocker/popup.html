@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>扩展</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="popup">
+  <div class="card">
+    <div class="row" style="padding:6px 4px;">
+      <div class="muted">URL</div>
+      <div id="currentUrl" class="small-text">加载中...</div>
+  <div class="muted">执行规则数：<strong id="ruleCount">0</strong></div>
+      <div class="buttons">
+        <button id="blockBtn">🚫 屏蔽此页</button>
+        <button id="manageBtn">⚙️ 管理黑名单</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

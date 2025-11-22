@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>管理面板</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>黑名单管理</h1>
+      <p class="subtitle">当前规则数：<strong id="count">0</strong></p>
+
+      <hr style="margin:18px 0">
+      <h2 style="margin:0 0 8px;font-size:16px">本地规则管理</h2>
+      <div class="controls">
+        <input type="text" id="newUrl" placeholder="https://example.com/path">
+        <input type="text" id="newReason" class="small" placeholder="原因（可选）">
+        <button id="addBtn">添加规则</button>
+        <button id="clearBtn">清空所有</button>
+        <input type="file" id="localImportFile" accept="application/json" style="margin-left:8px">
+        <button id="importLocalBtn">导入本地</button>
+        <button id="exportBtn">导出本地</button>
+      </div>
+      
+      <div id="rulesList"></div>
+
+      <hr style="margin:18px 0">
+      <h2 style="margin:0 0 8px;font-size:16px">远程规则管理</h2>
+      <p class="subtitle">从网络导入规则。</p>
+      <div class="controls">
+        <input type="text" id="remoteSource" placeholder="https://example.com/rules.json">
+        <button id="importRemoteBtn">导入远程</button>
+        <button id="clearRemoteBtn" style="background:#fff;border:1px solid #f3caca;color:var(--danger)">清空远程</button>
+      </div>
+
+      <div id="remoteList" style="margin-top:12px"></div>
+
+      <br/>
+      <hr style="margin:18px 0"/>
+      <h2 style="margin:0 0 8px;font-size:16px">Debug</h2>
+      <div class="controls">
+        <input type="text" id="debugUrl" placeholder="https://example.com/path">
+        <button id="debugTestBtn">测试 URL 是否命中规则</button>
+        <button id="debugListRulesBtn">列出当前 DNR 规则</button>
+      </div>
+      <div id="debugOutput" style="margin-top:8px;white-space:pre-wrap;font-size:13px;color:#334155"></div>
+
+    </div>
+  </div>
+
+  <script src="manage.js"></script>
+</body>
+</html>

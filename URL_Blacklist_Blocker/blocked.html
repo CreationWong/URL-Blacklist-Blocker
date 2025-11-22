@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>页面已被屏蔽</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="center">
+    <div class="panel">
+      <h1>🚫 页面已被屏蔽</h1>
+      <p class="info">此页面被列入黑名单。如需临时访问，可选择“临时放行”。</p>
+      <div>
+        <div style="font-size:13px;color:#9ca3af;margin-bottom:6px">网址</div>
+        <div id="url">正在加载...</div>
+      </div>
+      <div style="margin-top:12px">
+        <div style="font-size:13px;color:#9ca3af;margin-bottom:6px">规则</div>
+        <div id="rule">正在加载...</div>
+      </div>
+      <div style="margin-top:12px">
+        <div style="font-size:13px;color:#9ca3af;margin-bottom:6px">原因</div>
+        <div id="reason">正在加载...</div>
+      </div>
+
+      <div class="actions">
+        <button id="allowBtn" class="btn">临时放行（5秒）</button>
+        <button id="openManage" class="btn link">管理黑名单</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="blocked.js"></script>
+</body>
+</html>

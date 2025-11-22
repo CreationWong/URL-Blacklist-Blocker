@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "URL 黑名单拦截器",
+  "version": "1.0",
+  "description": "屏蔽指定网址，支持管理与临时放行",
+  "permissions": [
+    "storage",
+    "declarativeNetRequest",
+    "tabs",
+    "webNavigation",
+    "alarms"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "options_page": "manage.html",
+  "web_accessible_resources": [{
+    "resources": ["blocked.html", "blocked.js"],
+    "matches": ["<all_urls>"]
+  }]
+}
